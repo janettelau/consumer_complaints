@@ -37,16 +37,16 @@ https://files.consumerfinance.gov/ccdb/complaints.csv.zip
 7. Plotted the number of complaints per month as a line graph with the average and upper control limit (UCL).
 
 ## Building the Complaints Dashboard:
-- **HTML**:
-  1. Built the structure and the layout of the dashboard.
-  2. Imported the necessary libraries, such as Leaflet.js, Plotly.js, Bootstrap, and Google Fonts.
-  3. Created different sections for the state filter dropdown menu and visualizations.
+**HTML**:
+1. Built the structure and the layout of the dashboard.
+2. Imported the necessary libraries, such as Leaflet.js, Plotly.js, Bootstrap, and Google Fonts.
+3. Created different sections for the state filter dropdown menu and visualizations.
 
-- **Javascript**:
-  1. Loaded the data from the `sample_complaints.json` using D3.js.
-  2. Built a function to populate the state name dropdown.
-  3. Created the choropleth map and bar charts, which would change based on the state selected.
-  4. Implemented interactive map clicking that filters the dashboard.
+**Javascript**:
+1. Loaded the data from the `sample_complaints.json` using D3.js.
+2. Built a function to populate the state name dropdown.
+3. Created the choropleth map and bar charts, which would change based on the state selected.
+4. Implemented interactive map clicking that filters the dashboard.
  
 ## Dashboard:
 - **State Filter Dropdown Menu**:
@@ -54,8 +54,8 @@ https://files.consumerfinance.gov/ccdb/complaints.csv.zip
   - Users can filter the data by state.
 
 - **Complaints Summary**:
-  1. Total Complaints: Displays the total number of complaints for all states or the selected state.
-  2. Timely Response: Shows the total number of complaints that received timely responses for all states or the selected state.
+  - Total Complaints: Displays the total number of complaints for all states or the selected state.
+  - Timely Response: Shows the total number of complaints that received timely responses for all states or the selected state.
 
 - **US Map**:
   - Visually displays the state selected
@@ -64,8 +64,8 @@ https://files.consumerfinance.gov/ccdb/complaints.csv.zip
   - A colour gradient is shown based on the number of complaints each state receives when all states are selected.
 
 - **Bar Charts**:
-  1. Complaints by Product: Shows the number of complaints by product for all states or the selected state.
-  2. Complaints by Issue: Displays the top 10 complaints by issue for all states or the selected state.
+  - Complaints by Product: Shows the number of complaints by product for all states or the selected state.
+  - Complaints by Issue: Displays the top 10 complaints by issue for all states or the selected state.
 
 ## Ethical Considerations:
 We ensured the dataset was publicly available and provided by the United States government. Any sensitive information in the dataset is anonymized, and the study does not reinforce regional or demographic biases. Visualizations and insights are given honestly to ensure fairness and openness. Data is presented without bias or manipulation to alter outcomes.
