@@ -22,7 +22,7 @@ pip install -r requirements.txt
 5. Clone this repository to your local computer using `git clone`.
 6. Download the consumer complaints dataset from the Consumer Financial Protection Bureau by clicking on the link below.
 ```
-[https://www.consumerfinance.gov/data-research/consumer-complaints/](https://files.consumerfinance.gov/ccdb/complaints.csv.zip)
+https://files.consumerfinance.gov/ccdb/complaints.csv.zip
 ```
 7. Unzip the folder and add it to the cloned repository.
 8. Open Visual Studio Code and download "Live Server" by navigating to "Extensions" (Ctrl + Shift + X).
