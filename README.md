@@ -34,7 +34,7 @@ https://files.consumerfinance.gov/ccdb/complaints.csv.zip
 4. Changed the data format for select columns.
 5. Merged the `state_names.csv` with our sample Dataframe on the "state" column to get the "state_name" column.
 6. Saved the cleaned and aggregated data as a JSON file used for the dashboard.
-7. Plotted the number of complaints per month as a line graph with the average and upper control limit (UCL).
+7. Plotted the number of complaints per month as a line graph with the average and upper control limit (UCL) and saved it as a PNG.
 
 ## Building the Complaints Dashboard:
 **HTML**:
@@ -79,6 +79,7 @@ We ensured the dataset was publicly available and provided by the United States 
 - sample_complaints.csv
 - sample_complaints.json
 - index.html
+- Number of Complaints Per Month.png
 
 ## How to Run it 
 1. Open the cloned file in the Visual Studio Code:
