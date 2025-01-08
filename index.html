@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaints Dashboard</title>
+    <link rel="icon" href="./Resources/logo.png" type="image/png">
+    <!-- Add Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Use Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 20px;
+        }
+        h1 {
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card-title {
+            font-weight: 500;
+        }
+        #charts-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        #bar-chart-product {
+            position: absolute; /* Remove it from the flex layout */
+            left: 20px;         /* Adjust left position as needed */
+            top: 330px;         /* Adjust top position as needed */
+            width: 50%;         /* You can adjust the width to your preference */
+            height: 400px;      /* Adjust height if needed */
+        }
+
+        #complaints-map {
+            position: absolute; /* Remove it from the flex layout */
+            left: 700px;         /* Adjust left position as needed */
+            top: 330px;         /* Adjust top position as needed */
+        }
+
+        #bar-chart-issue {
+            position: absolute; /* Remove it from the flex layout */
+            left: 20px;         /* Adjust left position as needed */
+            top: 750px;         /* Adjust top position as needed */
+            width: 93%;         /* You can adjust the width to your preference */
+            height: 400px;      /* Adjust height if needed */
+        }
+
+        .select-container {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="d-flex justify-content-center align-items-center mb-4">
+            <img src="./Resources/logo.png" alt="Logo" width="100" height="40"> <!-- Change 'logo.png' to your image filename -->
+            <h1 class="ms-3">Complaints Dashboard</h1> <!-- ms-3 adds some space between the image and the title -->
+        </div>
+        
+        <!-- <h1 class="text-center mb-4">Complaints Dashboard</h1> -->
+
+        <!-- State Filter -->
+        <div class="select-container">
+            <label for="state-select" class="form-label">Select State:</label>
+            <select id="state-select" class="form-select">
+                <option value="All">All</option>
+                <!-- States will be dynamically loaded -->
+            </select>
+        </div>
+
+        <!-- Complaints Summary -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Complaints</h5>
+                        <p class="card-text" id="total-complaints">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Timely Responses</h5>
+                        <p class="card-text" id="timely-responses">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chart -->
+        <div id="charts-container">
+            <!-- First chart: Complaints by Issue -->
+            <div id="bar-chart-issue"></div>
+        
+            <!-- Second chart: Complaints by Product -->
+            <div id="bar-chart-product"></div>
+
+            <!-- Add a div for the map -->
+            <div id="complaints-map" style="height: 500px;"></div>
+
+        </div>
+
+    </div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
